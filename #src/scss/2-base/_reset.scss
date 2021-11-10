@@ -1,0 +1,99 @@
+/* Box sizing rules */
+* {
+	box-sizing: border-box;
+	&::before,
+	&::after {
+		box-sizing: border-box;
+	}
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+	padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+	margin: 0;
+}
+
+/* Set core body defaults */
+body {
+	min-height: 100vh;
+	scroll-behavior: smooth;
+	text-rendering: optimizeSpeed;
+	line-height: 28px;
+	font-size: 16px;
+	font-family: "AirbnbCereal", sans-serif;
+	color: #697687;
+	&::-webkit-scrollbar {
+		box-shadow: none;
+		width: 5px;
+		background: none;
+	}
+	&::-webkit-scrollbar-button {
+		display: none;
+		width: 3px;
+	}
+	&::-webkit-scrollbar-track {
+		display: none;
+		visibility: hidden;
+		opacity: 0;
+		background: none;
+	}
+	&::-webkit-scrollbar-thumb {
+		border-radius: 30px;
+		background: #3685fb;
+	}
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+	list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a {
+	&[class] {
+		text-decoration: none;
+	}
+	&:not([class]) {
+		text-decoration-skip-ink: auto;
+	}
+}
+
+/* Make images easier to work with */
+img {
+}
+img[class] {
+	// width: 100%;
+	display: block;
+	max-width: 100%;
+}
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+	margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
